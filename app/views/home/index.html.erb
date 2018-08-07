@@ -2,9 +2,12 @@
 <ul>
   <% Gossip.all.each do |a| %>
     <li>
-      <%= "Gossiper: " + a.anonymous_user.to_s + " Gossip: " + a.content + " Created at: " + a.created_at.to_s %>
+      <%= "Gossiper: " + a.anonymous_user.to_s %><br>
+      <span>Gossip: </span><br>
+      <%= a.content %><br>
+      <%= "Created at: " + a.created_at.to_s %><br>
       <% if current_user.anonymous_user == a.anonymous_user  %>
-        <%= link_to  "Delete Gossip", gossip_path(a.id), method: :delete %>
+        <%= link_to  "Delete Gossip", gossip_path(a.id), method: :delete %><br>
       <% end %>
     </li>
   <% end %>
