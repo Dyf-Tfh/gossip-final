@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>development.log - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/darkfish.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../README_md.html">README</a>
+  
+    <li><a href="../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../app/assets/config/manifest_js.html">manifest.js</a>
+  
+    <li><a href="../app/assets/javascripts/application_js.html">application.js</a>
+  
+    <li><a href="../app/assets/javascripts/cable_js.html">cable.js</a>
+  
+    <li><a href="../app/assets/javascripts/home_coffee.html">home.coffee</a>
+  
+    <li><a href="../app/assets/stylesheets/application_css.html">application.css</a>
+  
+    <li><a href="../app/assets/stylesheets/home_scss.html">home.scss</a>
+  
+    <li><a href="../config_ru.html">config.ru</a>
+  
+    <li><a href="../config/credentials_yml_enc.html">credentials.yml.enc</a>
+  
+    <li><a href="../config/master_key.html">master.key</a>
+  
+    <li><a href="../log/development_log.html">development.log</a>
+  
+    <li><a href="../package_json.html">package.json</a>
+  
+    <li><a href="../public/404_html.html">404.html</a>
+  
+    <li><a href="../public/422_html.html">422.html</a>
+  
+    <li><a href="../public/500_html.html">500.html</a>
+  
+    <li><a href="../public/apple-touch-icon-precomposed_png.html">apple-touch-icon-precomposed.png</a>
+  
+    <li><a href="../public/apple-touch-icon_png.html">apple-touch-icon.png</a>
+  
+    <li><a href="../public/favicon_ico.html">favicon.ico</a>
+  
+    <li><a href="../public/robots_txt.html">robots</a>
+  
+    <li><a href="../tmp/pids/server_pid.html">server.pid</a>
+  
+    <li><a href="../tmp/restart_txt.html">restart</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page log/development.log">
+
+<pre>[1m[35m (1470.5ms)[0m  [1m[35mCREATE DATABASE &quot;the_gossip_project_development&quot; ENCODING = &#39;unicode&#39;[0m
+↳ bin/rails:9
+[1m[35m (711.5ms)[0m  [1m[35mCREATE DATABASE &quot;the_gossip_project_test&quot; ENCODING = &#39;unicode&#39;[0m
+↳ bin/rails:9
+[1m[35m (167.5ms)[0m  [1m[35mCREATE TABLE &quot;schema_migrations&quot; (&quot;version&quot; character varying NOT NULL PRIMARY KEY)[0m
+↳ bin/rails:9
+[1m[35m (125.5ms)[0m  [1m[35mCREATE TABLE &quot;ar_internal_metadata&quot; (&quot;key&quot; character varying NOT NULL PRIMARY KEY, &quot;value&quot; character varying, &quot;created_at&quot; timestamp NOT NULL, &quot;updated_at&quot; timestamp NOT NULL)[0m
+↳ bin/rails:9
+[1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (0.7ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9</pre>
+
+<p>Migrating to <a href="../DeviseCreateUsers.html">DeviseCreateUsers</a>
+(20180807133628)</p>
+
+<pre>[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+↳ bin/rails:9
+[1m[35m (101.9ms)[0m  [1m[35mCREATE TABLE &quot;users&quot; (&quot;id&quot; bigserial primary key, &quot;email&quot; character varying DEFAULT &#39;&#39; NOT NULL, &quot;encrypted_password&quot; character varying DEFAULT &#39;&#39; NOT NULL, &quot;reset_password_token&quot; character varying, &quot;reset_password_sent_at&quot; timestamp, &quot;remember_created_at&quot; timestamp, &quot;sign_in_count&quot; integer DEFAULT 0 NOT NULL, &quot;current_sign_in_at&quot; timestamp, &quot;last_sign_in_at&quot; timestamp, &quot;current_sign_in_ip&quot; inet, &quot;last_sign_in_ip&quot; inet, &quot;index&quot; character varying, &quot;created_at&quot; timestamp NOT NULL, &quot;updated_at&quot; timestamp NOT NULL)[0m
+↳ db/migrate/20180807133628_devise_create_users.rb:5
+[1m[35m (69.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  &quot;index_users_on_email&quot; ON &quot;users&quot;  (&quot;email&quot;)[0m
+↳ db/migrate/20180807133628_devise_create_users.rb:40
+[1m[35m (48.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  &quot;index_users_on_reset_password_token&quot; ON &quot;users&quot;  (&quot;reset_password_token&quot;)[0m
+↳ db/migrate/20180807133628_devise_create_users.rb:41
+[1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO &quot;schema_migrations&quot; (&quot;version&quot;) VALUES ($1) RETURNING &quot;version&quot;[0m  [[&quot;version&quot;, &quot;20180807133628&quot;]]
+↳ bin/rails:9
+[1m[35m (18.0ms)[0m  [1m[35mCOMMIT[0m
+↳ bin/rails:9
+[1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  &quot;ar_internal_metadata&quot;.* FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = $1 LIMIT $2[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;LIMIT&quot;, 1]]
+↳ bin/rails:9
+[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+↳ bin/rails:9
+[1m[36mActiveRecord::InternalMetadata Create (4.2ms)[0m  [1m[32mINSERT INTO &quot;ar_internal_metadata&quot; (&quot;key&quot;, &quot;value&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES ($1, $2, $3, $4) RETURNING &quot;key&quot;[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;value&quot;, &quot;development&quot;], [&quot;created_at&quot;, &quot;2018-08-07 13:38:33.431064&quot;], [&quot;updated_at&quot;, &quot;2018-08-07 13:38:33.431064&quot;]]
+↳ bin/rails:9
+[1m[35m (10.2ms)[0m  [1m[35mCOMMIT[0m
+↳ bin/rails:9
+[1m[35m (1.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (1.8ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9
+[1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (0.8ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9</pre>
+
+<p>Migrating to <a href="../AddUsernameToUser.html">AddUsernameToUser</a>
+(20180807133950)</p>
+
+<pre>[1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+↳ bin/rails:9
+[1m[35m (1.1ms)[0m  [1m[35mALTER TABLE &quot;users&quot; ADD &quot;username&quot; character varying[0m
+↳ db/migrate/20180807133950_add_username_to_user.rb:3
+[1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO &quot;schema_migrations&quot; (&quot;version&quot;) VALUES ($1) RETURNING &quot;version&quot;[0m  [[&quot;version&quot;, &quot;20180807133950&quot;]]
+↳ bin/rails:9
+[1m[35m (23.0ms)[0m  [1m[35mCOMMIT[0m
+↳ bin/rails:9</pre>
+
+<p>Migrating to <a href="../CreateGossips.html">CreateGossips</a>
+(20180807134139)</p>
+
+<pre>[1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+↳ bin/rails:9
+[1m[35m (72.9ms)[0m  [1m[35mCREATE TABLE &quot;gossips&quot; (&quot;id&quot; bigserial primary key, &quot;content&quot; text, &quot;created_at&quot; timestamp NOT NULL, &quot;updated_at&quot; timestamp NOT NULL)[0m
+↳ db/migrate/20180807134139_create_gossips.rb:3
+[1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO &quot;schema_migrations&quot; (&quot;version&quot;) VALUES ($1) RETURNING &quot;version&quot;[0m  [[&quot;version&quot;, &quot;20180807134139&quot;]]
+↳ bin/rails:9
+[1m[35m (21.3ms)[0m  [1m[35mCOMMIT[0m
+↳ bin/rails:9
+[1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  &quot;ar_internal_metadata&quot;.* FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = $1 LIMIT $2[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;LIMIT&quot;, 1]]
+↳ bin/rails:9
+[1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+↳ bin/rails:9
+[1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+↳ bin/rails:9
+[1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (1.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-08-07 15:49:59 +0200</p>
+
+<pre>[1m[35m (0.9ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98</pre>
+
+<p>ActionController::RoutingError (uninitialized constant <a
+href="../HomeController.html">HomeController</a>):</p>
+
+<p>bootsnap (1.3.1)
+lib/bootsnap/load_path_cache/core_ext/active_support.rb:53:in `block in
+load_missing_constant&#39; bootsnap (1.3.1)
+lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in
+`without_bootsnap_cache&#39; bootsnap (1.3.1)
+lib/bootsnap/load_path_cache/core_ext/active_support.rb:53:in `rescue in
+load_missing_constant&#39; bootsnap (1.3.1)
+lib/bootsnap/load_path_cache/core_ext/active_support.rb:42:in
+`load_missing_constant&#39; activesupport (5.2.0)
+lib/active_support/inflector/methods.rb:283:in `const_get&#39;
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:283:in `block
+in constantize&#39; activesupport (5.2.0)
+lib/active_support/inflector/methods.rb:281:in `each&#39; activesupport
+(5.2.0) lib/active_support/inflector/methods.rb:281:in `inject&#39;
+activesupport (5.2.0) lib/active_support/inflector/methods.rb:281:in
+`constantize&#39; actionpack (5.2.0)
+lib/action_dispatch/http/request.rb:88:in `controller_class_for&#39;
+actionpack (5.2.0) lib/action_dispatch/http/request.rb:81:in
+`controller_class&#39; actionpack (5.2.0)
+lib/action_dispatch/routing/route_set.rb:46:in `controller&#39; actionpack
+(5.2.0) lib/action_dispatch/routing/route_set.rb:32:in `serve&#39;
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in
+serve&#39; actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in
+`each&#39; actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in
+`serve&#39; actionpack (5.2.0)
+lib/action_dispatch/routing/route_set.rb:840:in `call&#39; warden (1.2.7)
+lib/warden/manager.rb:36:in `block in call&#39; warden (1.2.7)
+lib/warden/manager.rb:35:in `catch&#39; warden (1.2.7)
+lib/warden/manager.rb:35:in `call&#39; rack (2.0.5)
+lib/rack/tempfile_reaper.rb:15:in `call&#39; rack (2.0.5)
+lib/rack/etag.rb:25:in `call&#39; rack (2.0.5)
+lib/rack/conditional_get.rb:25:in `call&#39; rack (2.0.5)
+lib/rack/head.rb:12:in `call&#39; actionpack (5.2.0)
+lib/action_dispatch/http/content_security_policy.rb:18:in `call&#39; rack
+(2.0.5) lib/rack/session/abstract/id.rb:232:in `context&#39; rack (2.0.5)
+lib/rack/session/abstract/id.rb:226:in `call&#39; actionpack (5.2.0)
+lib/action_dispatch/middleware/cookies.rb:670:in `call&#39; activerecord
+(5.2.0) lib/active_record/migration.rb:559:in `call&#39; actionpack (5.2.0)
+lib/action_dispatch/middleware/callbacks.rb:28:in `block in call&#39;
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in
+`run_callbacks&#39; actionpack (5.2.0)
+lib/action_dispatch/middleware/callbacks.rb:26:in `call&#39; actionpack
+(5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call&#39;
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in
+`call&#39; web-console (3.6.2) lib/web_console/middleware.rb:135:in
+`call_app&#39; web-console (3.6.2) lib/web_console/middleware.rb:30:in
+`block in call&#39; web-console (3.6.2) lib/web_console/middleware.rb:20:in
+`catch&#39; web-console (3.6.2) lib/web_console/middleware.rb:20:in
+`call&#39; actionpack (5.2.0)
+lib/action_dispatch/middleware/show_exceptions.rb:33:in `call&#39; railties
+(5.2.0) lib/rails/rack/logger.rb:38:in `call_app&#39; railties (5.2.0)
+lib/rails/rack/logger.rb:26:in `block in call&#39; activesupport (5.2.0)
+lib/active_support/tagged_logging.rb:71:in `block in tagged&#39;
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in
+`tagged&#39; activesupport (5.2.0)
+lib/active_support/tagged_logging.rb:71:in `tagged&#39; railties (5.2.0)
+lib/rails/rack/logger.rb:26:in `call&#39; sprockets-rails (3.2.1)
+lib/sprockets/rails/quiet_assets.rb:13:in `call&#39; actionpack (5.2.0)
+lib/action_dispatch/middleware/remote_ip.rb:81:in `call&#39; actionpack
+(5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call&#39; rack
+(2.0.5) lib/rack/method_override.rb:22:in `call&#39; rack (2.0.5)
+lib/rack/runtime.rb:22:in `call&#39; activesupport (5.2.0)
+lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+`call&#39; actionpack (5.2.0)
+lib/action_dispatch/middleware/executor.rb:14:in `call&#39; actionpack
+(5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call&#39; rack
+(2.0.5) lib/rack/sendfile.rb:111:in `call&#39; railties (5.2.0)
+lib/rails/engine.rb:524:in `call&#39; puma (3.12.0)
+lib/puma/configuration.rb:225:in `call&#39; puma (3.12.0)
+lib/puma/server.rb:658:in `handle_request&#39; puma (3.12.0)
+lib/puma/server.rb:472:in `process_client&#39; puma (3.12.0)
+lib/puma/server.rb:332:in `block in run&#39; puma (3.12.0)
+lib/puma/thread_pool.rb:133:in `block in spawn_thread&#39; Started GET “/”
+for 127.0.0.1 at 2018-08-07 15:56:37 +0200</p>
+
+<p>ActionController::RoutingError (undefined local variable or method
+`exception&#39; for ApplicationController:Class):</p>
+
+<p>app/controllers/application_controller.rb:2:in
+`&lt;class:ApplicationController&gt;&#39;
+app/controllers/application_controller.rb:1:in `&lt;main&gt;&#39;
+app/controllers/home_controller.rb:1:in `&lt;main&gt;&#39; Started GET “/”
+for 127.0.0.1 at 2018-08-07 15:57:08 +0200 Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML Completed 401 Unauthorized in 34ms (ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_in” for 127.0.0.1 at 2018-08-07 15:57:08 +0200
+Processing by Devise::SessionsController#new as HTML</p>
+
+<pre>Rendering /home/nicolas/.rvm/gems/ruby-2.5.1/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+Rendered /home/nicolas/.rvm/gems/ruby-2.5.1/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (5.0ms)
+Rendered /home/nicolas/.rvm/gems/ruby-2.5.1/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (57.5ms)</pre>
+
+<p>Completed 200 OK in 2390ms (Views: 2313.9ms | ActiveRecord: 15.7ms)</p>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-08-07 15:57:16 +0200 Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_in” for 127.0.0.1 at 2018-08-07 15:57:16 +0200
+Processing by Devise::SessionsController#new as HTML</p>
+
+<pre>Rendering /home/nicolas/.rvm/gems/ruby-2.5.1/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+Rendered /home/nicolas/.rvm/gems/ruby-2.5.1/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.5ms)
+Rendered /home/nicolas/.rvm/gems/ruby-2.5.1/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (5.7ms)</pre>
+
+<p>Completed 200 OK in 51ms (Views: 49.5ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/home/index” for 127.0.0.1 at 2018-08-07 15:58:45 +0200
+Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_in” for 127.0.0.1 at 2018-08-07 15:58:45 +0200
+Processing by Devise::SessionsController#new as HTML</p>
+
+<pre>Rendering /home/nicolas/.rvm/gems/ruby-2.5.1/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+Rendered /home/nicolas/.rvm/gems/ruby-2.5.1/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.8ms)
+Rendered /home/nicolas/.rvm/gems/ruby-2.5.1/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (8.7ms)</pre>
+
+<p>Completed 200 OK in 53ms (Views: 51.4ms | ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (0.9ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9
+[1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  &quot;ar_internal_metadata&quot;.* FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = $1 LIMIT $2[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;LIMIT&quot;, 1]]
+↳ bin/rails:9
+[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+↳ bin/rails:9
+[1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+↳ bin/rails:9
+[1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (0.5ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9
+[1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (0.8ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9
+[1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  &quot;ar_internal_metadata&quot;.* FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = $1 LIMIT $2[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;LIMIT&quot;, 1]]
+↳ bin/rails:9
+[1m[35m (3.3ms)[0m  [1m[35mBEGIN[0m
+↳ bin/rails:9
+[1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+↳ bin/rails:9
+[1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-08-07 16:01:30 +0200</p>
+
+<pre>[1m[35m (1.5ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98</pre>
+
+<p>Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML Completed 401 Unauthorized in 27ms (ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_in” for 127.0.0.1 at 2018-08-07 16:01:30 +0200
+Processing by Devise::SessionsController#new as HTML</p>
+
+<pre>Rendering devise/sessions/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (2.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (16.9ms)</pre>
+
+<p>Completed 200 OK in 365ms (Views: 318.0ms | ActiveRecord: 10.2ms)</p>
+
+<p>Started GET “/users/sign_in” for 127.0.0.1 at 2018-08-07 16:01:32 +0200
+Processing by Devise::SessionsController#new as HTML</p>
+
+<pre>Rendering devise/sessions/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (1.6ms)
+Rendered devise/sessions/new.html.erb within layouts/application (12.7ms)</pre>
+
+<p>Completed 200 OK in 48ms (Views: 45.9ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_in” for 127.0.0.1 at 2018-08-07 16:02:36 +0200
+Processing by Devise::SessionsController#new as HTML</p>
+
+<pre>Rendering devise/sessions/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (5.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (17.3ms)</pre>
+
+<p>Completed 200 OK in 352ms (Views: 135.9ms | ActiveRecord: 13.6ms)</p>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-08-07 16:02:40 +0200 Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_in” for 127.0.0.1 at 2018-08-07 16:02:40 +0200
+Processing by Devise::SessionsController#new as HTML</p>
+
+<pre>Rendering devise/sessions/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (2.5ms)
+Rendered devise/sessions/new.html.erb within layouts/application (13.9ms)</pre>
+
+<p>Completed 200 OK in 88ms (Views: 83.5ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-08-07 16:03:47 +0200 Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_in” for 127.0.0.1 at 2018-08-07 16:03:47 +0200
+Processing by Devise::SessionsController#new as HTML</p>
+
+<pre>Rendering devise/sessions/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (2.2ms)
+Rendered devise/sessions/new.html.erb within layouts/application (8.0ms)</pre>
+
+<p>Completed 200 OK in 119ms (Views: 54.3ms | ActiveRecord: 19.4ms)</p>
+
+<p>Started GET “/users/sign_in” for 127.0.0.1 at 2018-08-07 16:04:54 +0200
+Processing by Devise::SessionsController#new as HTML</p>
+
+<pre>Rendering devise/sessions/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (1.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (18.4ms)</pre>
+
+<p>Completed 200 OK in 79ms (Views: 77.1ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/home/index” for 127.0.0.1 at 2018-08-07 16:04:58 +0200
+Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_in” for 127.0.0.1 at 2018-08-07 16:04:58 +0200
+Processing by Devise::SessionsController#new as HTML</p>
+
+<pre>Rendering devise/sessions/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (1.4ms)
+Rendered devise/sessions/new.html.erb within layouts/application (13.8ms)</pre>
+
+<p>Completed 200 OK in 55ms (Views: 53.1ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_up” for 127.0.0.1 at 2018-08-07 16:05:05 +0200
+Processing by Devise::RegistrationsController#new as HTML</p>
+
+<pre>Rendering devise/registrations/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (1.6ms)
+Rendered devise/registrations/new.html.erb within layouts/application (10.8ms)</pre>
+
+<p>Completed 200 OK in 50ms (Views: 48.5ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started POST “/users” for 127.0.0.1 at 2018-08-07 16:05:16 +0200 Processing
+by Devise::RegistrationsController#create as HTML</p>
+
+<pre>Parameters: {&quot;utf8&quot;=&gt;&quot;✓&quot;, &quot;authenticity_token&quot;=&gt;&quot;glq/3tdYfbBiov00DuOOZiEPg5cNMEf6GWQhhcDgf6Vx44+e5WylsAO0fAFE8ZIhCLhquOjqTcyFxwkJdZT5QQ==&quot;, &quot;user&quot;=&gt;{&quot;email&quot;=&gt;&quot;n.zhao@hotmail.fr&quot;, &quot;password&quot;=&gt;&quot;[FILTERED]&quot;, &quot;password_confirmation&quot;=&gt;&quot;[FILTERED]&quot;}, &quot;commit&quot;=&gt;&quot;Sign up&quot;}
+[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[36mUser Exists (20.7ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = $1 LIMIT $2[0m  [[&quot;email&quot;, &quot;n.zhao@hotmail.fr&quot;], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[36mUser Create (13.1ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;encrypted_password&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES ($1, $2, $3, $4) RETURNING &quot;id&quot;[0m  [[&quot;email&quot;, &quot;n.zhao@hotmail.fr&quot;], [&quot;encrypted_password&quot;, &quot;$2a$11$skv0.YuuVprpB30V7W4gCeEzjgUe95AxMalKvMflENtfzKvRDahDq&quot;], [&quot;created_at&quot;, &quot;2018-08-07 14:05:16.477085&quot;], [&quot;updated_at&quot;, &quot;2018-08-07 14:05:16.477085&quot;]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (29.5ms)[0m  [1m[35mCOMMIT[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[36mUser Update (2.4ms)[0m  [1m[33mUPDATE &quot;users&quot; SET &quot;sign_in_count&quot; = $1, &quot;current_sign_in_at&quot; = $2, &quot;last_sign_in_at&quot; = $3, &quot;current_sign_in_ip&quot; = $4, &quot;last_sign_in_ip&quot; = $5, &quot;updated_at&quot; = $6 WHERE &quot;users&quot;.&quot;id&quot; = $7[0m  [[&quot;sign_in_count&quot;, 1], [&quot;current_sign_in_at&quot;, &quot;2018-08-07 14:05:16.523291&quot;], [&quot;last_sign_in_at&quot;, &quot;2018-08-07 14:05:16.523291&quot;], [&quot;current_sign_in_ip&quot;, &quot;127.0.0.1/32&quot;], [&quot;last_sign_in_ip&quot;, &quot;127.0.0.1/32&quot;], [&quot;updated_at&quot;, &quot;2018-08-07 14:05:16.526987&quot;], [&quot;id&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (10.4ms)[0m  [1m[35mCOMMIT[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98</pre>
+
+<p>Redirected to <a
+href="http://localhost:3000/home/index">localhost:3000/home/index</a>
+Completed 302 Found in 407ms (ActiveRecord: 77.7ms)</p>
+
+<p>Started GET “/home/index” for 127.0.0.1 at 2018-08-07 16:05:16 +0200
+Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML</p>
+
+<pre>[1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;id&quot;, 1], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Rendering home/index.html.erb within layouts/application
+Rendered home/index.html.erb within layouts/application (0.5ms)</pre>
+
+<p>Completed 200 OK in 69ms (Views: 57.1ms | ActiveRecord: 2.6ms)</p>
+
+<p>Started GET “/home/index” for 127.0.0.1 at 2018-08-07 16:07:12 +0200
+Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML</p>
+
+<pre>Rendering home/index.html.erb within layouts/application
+Rendered home/index.html.erb within layouts/application (0.6ms)</pre>
+
+<p>Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/logout” for 127.0.0.1 at 2018-08-07 16:07:16 +0200</p>
+
+<p>ActionController::RoutingError (No route matches [GET] “/logout”):</p>
+
+<p>actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in
+`call&#39; web-console (3.6.2) lib/web_console/middleware.rb:135:in
+`call_app&#39; web-console (3.6.2) lib/web_console/middleware.rb:30:in
+`block in call&#39; web-console (3.6.2) lib/web_console/middleware.rb:20:in
+`catch&#39; web-console (3.6.2) lib/web_console/middleware.rb:20:in
+`call&#39; actionpack (5.2.0)
+lib/action_dispatch/middleware/show_exceptions.rb:33:in `call&#39; railties
+(5.2.0) lib/rails/rack/logger.rb:38:in `call_app&#39; railties (5.2.0)
+lib/rails/rack/logger.rb:26:in `block in call&#39; activesupport (5.2.0)
+lib/active_support/tagged_logging.rb:71:in `block in tagged&#39;
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in
+`tagged&#39; activesupport (5.2.0)
+lib/active_support/tagged_logging.rb:71:in `tagged&#39; railties (5.2.0)
+lib/rails/rack/logger.rb:26:in `call&#39; sprockets-rails (3.2.1)
+lib/sprockets/rails/quiet_assets.rb:13:in `call&#39; actionpack (5.2.0)
+lib/action_dispatch/middleware/remote_ip.rb:81:in `call&#39; actionpack
+(5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call&#39; rack
+(2.0.5) lib/rack/method_override.rb:22:in `call&#39; rack (2.0.5)
+lib/rack/runtime.rb:22:in `call&#39; activesupport (5.2.0)
+lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+`call&#39; actionpack (5.2.0)
+lib/action_dispatch/middleware/executor.rb:14:in `call&#39; actionpack
+(5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call&#39; rack
+(2.0.5) lib/rack/sendfile.rb:111:in `call&#39; railties (5.2.0)
+lib/rails/engine.rb:524:in `call&#39; puma (3.12.0)
+lib/puma/configuration.rb:225:in `call&#39; puma (3.12.0)
+lib/puma/server.rb:658:in `handle_request&#39; puma (3.12.0)
+lib/puma/server.rb:472:in `process_client&#39; puma (3.12.0)
+lib/puma/server.rb:332:in `block in run&#39; puma (3.12.0)
+lib/puma/thread_pool.rb:133:in `block in spawn_thread&#39; Started GET
+“/users/sign_out” for 127.0.0.1 at 2018-08-07 16:07:39 +0200</p>
+
+<p>ActionController::RoutingError (No route matches [GET] “/users/sign_out”):</p>
+
+<p>actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in
+`call&#39; web-console (3.6.2) lib/web_console/middleware.rb:135:in
+`call_app&#39; web-console (3.6.2) lib/web_console/middleware.rb:30:in
+`block in call&#39; web-console (3.6.2) lib/web_console/middleware.rb:20:in
+`catch&#39; web-console (3.6.2) lib/web_console/middleware.rb:20:in
+`call&#39; actionpack (5.2.0)
+lib/action_dispatch/middleware/show_exceptions.rb:33:in `call&#39; railties
+(5.2.0) lib/rails/rack/logger.rb:38:in `call_app&#39; railties (5.2.0)
+lib/rails/rack/logger.rb:26:in `block in call&#39; activesupport (5.2.0)
+lib/active_support/tagged_logging.rb:71:in `block in tagged&#39;
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in
+`tagged&#39; activesupport (5.2.0)
+lib/active_support/tagged_logging.rb:71:in `tagged&#39; railties (5.2.0)
+lib/rails/rack/logger.rb:26:in `call&#39; sprockets-rails (3.2.1)
+lib/sprockets/rails/quiet_assets.rb:13:in `call&#39; actionpack (5.2.0)
+lib/action_dispatch/middleware/remote_ip.rb:81:in `call&#39; actionpack
+(5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call&#39; rack
+(2.0.5) lib/rack/method_override.rb:22:in `call&#39; rack (2.0.5)
+lib/rack/runtime.rb:22:in `call&#39; activesupport (5.2.0)
+lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+`call&#39; actionpack (5.2.0)
+lib/action_dispatch/middleware/executor.rb:14:in `call&#39; actionpack
+(5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call&#39; rack
+(2.0.5) lib/rack/sendfile.rb:111:in `call&#39; railties (5.2.0)
+lib/rails/engine.rb:524:in `call&#39; puma (3.12.0)
+lib/puma/configuration.rb:225:in `call&#39; puma (3.12.0)
+lib/puma/server.rb:658:in `handle_request&#39; puma (3.12.0)
+lib/puma/server.rb:472:in `process_client&#39; puma (3.12.0)
+lib/puma/server.rb:332:in `block in run&#39; puma (3.12.0)
+lib/puma/thread_pool.rb:133:in `block in spawn_thread&#39; Started GET “/”
+for 127.0.0.1 at 2018-08-07 16:11:33 +0200 Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML</p>
+
+<pre>Rendering home/index.html.erb within layouts/application
+[1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;id&quot;, 1], [&quot;LIMIT&quot;, 1]]
+↳ app/views/home/index.html.erb:3
+Rendered home/index.html.erb within layouts/application (47.2ms)</pre>
+
+<p>Completed 200 OK in 92ms (Views: 76.1ms | ActiveRecord: 13.9ms)</p>
+
+<p>Started DELETE “/users/sign_out” for 127.0.0.1 at 2018-08-07 16:11:35 +0200
+Processing by Devise::SessionsController#destroy as HTML</p>
+
+<pre>Parameters: {&quot;authenticity_token&quot;=&gt;&quot;4AgZPwGd5kNcy3lgh8J/MOebywUaCUndIaZ5tn/l+vouGy8ihXept10zECvcwdz7aAfejpZC0zP/IWri0Ao68g==&quot;}
+[1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;id&quot;, 1], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98</pre>
+
+<p>Redirected to <a href="http://localhost:3000">localhost:3000</a>/ Completed
+302 Found in 14ms (ActiveRecord: 1.2ms)</p>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-08-07 16:11:35 +0200 Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML</p>
+
+<pre>Rendering home/index.html.erb within layouts/application
+Rendered home/index.html.erb within layouts/application (2.8ms)</pre>
+
+<p>Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_in” for 127.0.0.1 at 2018-08-07 16:11:41 +0200
+Processing by Devise::SessionsController#new as HTML</p>
+
+<pre>Rendering devise/sessions/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (3.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (24.8ms)</pre>
+
+<p>Completed 200 OK in 71ms (Views: 66.5ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_up” for 127.0.0.1 at 2018-08-07 16:11:43 +0200
+Processing by Devise::RegistrationsController#new as HTML</p>
+
+<pre>Rendering devise/registrations/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (1.6ms)
+Rendered devise/registrations/new.html.erb within layouts/application (6.1ms)</pre>
+
+<p>Completed 200 OK in 48ms (Views: 46.3ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_in” for 127.0.0.1 at 2018-08-07 16:11:48 +0200
+Processing by Devise::SessionsController#new as HTML</p>
+
+<pre>Rendering devise/sessions/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (3.6ms)
+Rendered devise/sessions/new.html.erb within layouts/application (8.3ms)</pre>
+
+<p>Completed 200 OK in 61ms (Views: 57.5ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_up” for 127.0.0.1 at 2018-08-07 16:11:50 +0200
+Processing by Devise::RegistrationsController#new as HTML</p>
+
+<pre>Rendering devise/registrations/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (3.8ms)
+Rendered devise/registrations/new.html.erb within layouts/application (11.9ms)</pre>
+
+<p>Completed 200 OK in 108ms (Views: 106.7ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_in” for 127.0.0.1 at 2018-08-07 16:11:54 +0200
+Processing by Devise::SessionsController#new as HTML</p>
+
+<pre>Rendering devise/sessions/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (1.6ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.0ms)</pre>
+
+<p>Completed 200 OK in 71ms (Views: 68.6ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_in” for 127.0.0.1 at 2018-08-07 16:12:06 +0200
+Processing by Devise::SessionsController#new as HTML</p>
+
+<pre>Rendering devise/sessions/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (2.1ms)
+Rendered devise/sessions/new.html.erb within layouts/application (6.7ms)</pre>
+
+<p>Completed 200 OK in 54ms (Views: 52.2ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started POST “/users/sign_in” for 127.0.0.1 at 2018-08-07 16:12:11 +0200
+Processing by Devise::SessionsController#create as HTML</p>
+
+<pre>Parameters: {&quot;utf8&quot;=&gt;&quot;✓&quot;, &quot;authenticity_token&quot;=&gt;&quot;xka/yabqWC6J1a8kyZTAS7OLwGKUjNTRmjIOEUni5PjUPGL7T6DJ/WDPtu2vPJ0dVgA6yuM3Jcs3IJZek7pgUw==&quot;, &quot;user&quot;=&gt;{&quot;email&quot;=&gt;&quot;n.zhao@hotmail.fr&quot;, &quot;password&quot;=&gt;&quot;[FILTERED]&quot;, &quot;remember_me&quot;=&gt;&quot;0&quot;}, &quot;commit&quot;=&gt;&quot;Log in&quot;}
+[1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;email&quot;, &quot;n.zhao@hotmail.fr&quot;], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE &quot;users&quot; SET &quot;current_sign_in_at&quot; = $1, &quot;sign_in_count&quot; = $2, &quot;updated_at&quot; = $3 WHERE &quot;users&quot;.&quot;id&quot; = $4[0m  [[&quot;current_sign_in_at&quot;, &quot;2018-08-07 14:12:11.769397&quot;], [&quot;sign_in_count&quot;, 2], [&quot;updated_at&quot;, &quot;2018-08-07 14:12:11.770788&quot;], [&quot;id&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (30.7ms)[0m  [1m[35mCOMMIT[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98</pre>
+
+<p>Redirected to <a href="http://localhost:3000">localhost:3000</a>/ Completed
+302 Found in 282ms (ActiveRecord: 36.1ms)</p>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-08-07 16:12:11 +0200 Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML</p>
+
+<pre>Rendering home/index.html.erb within layouts/application
+[1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;id&quot;, 1], [&quot;LIMIT&quot;, 1]]
+↳ app/views/home/index.html.erb:3
+Rendered home/index.html.erb within layouts/application (5.7ms)</pre>
+
+<p>Completed 200 OK in 48ms (Views: 43.4ms | ActiveRecord: 2.8ms)</p>
+
+<p>Started GET “/users/edit” for 127.0.0.1 at 2018-08-07 16:12:13 +0200
+Processing by Devise::RegistrationsController#edit as HTML</p>
+
+<pre>[1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;id&quot;, 1], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Rendering devise/registrations/edit.html.erb within layouts/application
+Rendered devise/registrations/edit.html.erb within layouts/application (5.4ms)</pre>
+
+<p>Completed 200 OK in 50ms (Views: 36.7ms | ActiveRecord: 2.4ms)</p>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-08-07 16:13:34 +0200 Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML</p>
+
+<pre>[1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;id&quot;, 1], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Rendering home/index.html.erb within layouts/application
+Rendered home/index.html.erb within layouts/application (1.4ms)</pre>
+
+<p>Completed 200 OK in 77ms (Views: 34.1ms | ActiveRecord: 9.0ms)</p>
+
+<p>Started DELETE “/users/sign_out” for 127.0.0.1 at 2018-08-07 16:13:36 +0200
+Processing by Devise::SessionsController#destroy as HTML</p>
+
+<pre>Parameters: {&quot;authenticity_token&quot;=&gt;&quot;BzkqlhvPbM6mqsXPoos0N9kZs7DgG+2RpleDNOfLGlHFZKTeSADotzgvG3lJcwsxtlRPZSf6jBnhIEtv9TcYlQ==&quot;}
+[1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;id&quot;, 1], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98</pre>
+
+<p>Redirected to <a href="http://localhost:3000">localhost:3000</a>/ Completed
+302 Found in 16ms (ActiveRecord: 3.3ms)</p>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-08-07 16:13:36 +0200 Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_in” for 127.0.0.1 at 2018-08-07 16:13:36 +0200
+Processing by Devise::SessionsController#new as HTML</p>
+
+<pre>Rendering devise/sessions/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (1.5ms)
+Rendered devise/sessions/new.html.erb within layouts/application (10.0ms)</pre>
+
+<p>Completed 200 OK in 57ms (Views: 54.6ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/home” for 127.0.0.1 at 2018-08-07 16:13:40 +0200</p>
+
+<p>ActionController::RoutingError (No route matches [GET] “/home”):</p>
+
+<p>actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:65:in
+`call&#39; web-console (3.6.2) lib/web_console/middleware.rb:135:in
+`call_app&#39; web-console (3.6.2) lib/web_console/middleware.rb:30:in
+`block in call&#39; web-console (3.6.2) lib/web_console/middleware.rb:20:in
+`catch&#39; web-console (3.6.2) lib/web_console/middleware.rb:20:in
+`call&#39; actionpack (5.2.0)
+lib/action_dispatch/middleware/show_exceptions.rb:33:in `call&#39; railties
+(5.2.0) lib/rails/rack/logger.rb:38:in `call_app&#39; railties (5.2.0)
+lib/rails/rack/logger.rb:26:in `block in call&#39; activesupport (5.2.0)
+lib/active_support/tagged_logging.rb:71:in `block in tagged&#39;
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in
+`tagged&#39; activesupport (5.2.0)
+lib/active_support/tagged_logging.rb:71:in `tagged&#39; railties (5.2.0)
+lib/rails/rack/logger.rb:26:in `call&#39; sprockets-rails (3.2.1)
+lib/sprockets/rails/quiet_assets.rb:13:in `call&#39; actionpack (5.2.0)
+lib/action_dispatch/middleware/remote_ip.rb:81:in `call&#39; actionpack
+(5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call&#39; rack
+(2.0.5) lib/rack/method_override.rb:22:in `call&#39; rack (2.0.5)
+lib/rack/runtime.rb:22:in `call&#39; activesupport (5.2.0)
+lib/active_support/cache/strategy/local_cache_middleware.rb:29:in
+`call&#39; actionpack (5.2.0)
+lib/action_dispatch/middleware/executor.rb:14:in `call&#39; actionpack
+(5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call&#39; rack
+(2.0.5) lib/rack/sendfile.rb:111:in `call&#39; railties (5.2.0)
+lib/rails/engine.rb:524:in `call&#39; puma (3.12.0)
+lib/puma/configuration.rb:225:in `call&#39; puma (3.12.0)
+lib/puma/server.rb:658:in `handle_request&#39; puma (3.12.0)
+lib/puma/server.rb:472:in `process_client&#39; puma (3.12.0)
+lib/puma/server.rb:332:in `block in run&#39; puma (3.12.0)
+lib/puma/thread_pool.rb:133:in `block in spawn_thread&#39; Started GET “/”
+for 127.0.0.1 at 2018-08-07 16:13:44 +0200 Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_in” for 127.0.0.1 at 2018-08-07 16:13:44 +0200
+Processing by Devise::SessionsController#new as HTML</p>
+
+<pre>Rendering devise/sessions/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (1.6ms)
+Rendered devise/sessions/new.html.erb within layouts/application (6.2ms)</pre>
+
+<p>Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started POST “/users/sign_in” for 127.0.0.1 at 2018-08-07 16:13:51 +0200
+Processing by Devise::SessionsController#create as HTML</p>
+
+<pre>Parameters: {&quot;utf8&quot;=&gt;&quot;✓&quot;, &quot;authenticity_token&quot;=&gt;&quot;faFbjB74c4uAPJ45zDLL+kDCxxoLnBe7Ib7oSLWQjr6TbrMKApXZP9td38Xh8PTNWjwS2xiEbyoFmQ+mzfMZxw==&quot;, &quot;user&quot;=&gt;{&quot;email&quot;=&gt;&quot;n.zhao@hotmail.fr&quot;, &quot;password&quot;=&gt;&quot;[FILTERED]&quot;, &quot;remember_me&quot;=&gt;&quot;0&quot;}, &quot;commit&quot;=&gt;&quot;Log in&quot;}
+[1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;email&quot;, &quot;n.zhao@hotmail.fr&quot;], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE &quot;users&quot; SET &quot;current_sign_in_at&quot; = $1, &quot;last_sign_in_at&quot; = $2, &quot;sign_in_count&quot; = $3, &quot;updated_at&quot; = $4 WHERE &quot;users&quot;.&quot;id&quot; = $5[0m  [[&quot;current_sign_in_at&quot;, &quot;2018-08-07 14:13:51.236788&quot;], [&quot;last_sign_in_at&quot;, &quot;2018-08-07 14:12:11.769397&quot;], [&quot;sign_in_count&quot;, 3], [&quot;updated_at&quot;, &quot;2018-08-07 14:13:51.238527&quot;], [&quot;id&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (14.2ms)[0m  [1m[35mCOMMIT[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98</pre>
+
+<p>Redirected to <a href="http://localhost:3000">localhost:3000</a>/ Completed
+302 Found in 258ms (ActiveRecord: 15.7ms)</p>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-08-07 16:13:51 +0200 Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML</p>
+
+<pre>[1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;id&quot;, 1], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Rendering home/index.html.erb within layouts/application
+Rendered home/index.html.erb within layouts/application (4.9ms)</pre>
+
+<p>Completed 200 OK in 52ms (Views: 45.2ms | ActiveRecord: 2.2ms)</p>
+
+<pre>[1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (0.9ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9</pre>
+
+<p>Migrating to <a
+href="../AddAssotiationToGossip.html">AddAssotiationToGossip</a>
+(20180807141907)</p>
+
+<pre>[1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (0.8ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9</pre>
+
+<p>Migrating to <a
+href="../AddAssotiationToGossip.html">AddAssotiationToGossip</a>
+(20180807141907)</p>
+
+<pre>[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+↳ bin/rails:9
+[1m[35m (1.7ms)[0m  [1m[31mROLLBACK[0m
+↳ bin/rails:9
+[1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (1.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9</pre>
+
+<p>Migrating to <a
+href="../AddAssotiationToGossip.html">AddAssotiationToGossip</a>
+(20180807141907)</p>
+
+<pre>[1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+↳ bin/rails:9
+[1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+↳ bin/rails:9
+[1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (0.8ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9</pre>
+
+<p>Migrating to <a
+href="../AddAssotiationToGossip.html">AddAssotiationToGossip</a>
+(20180807141907)</p>
+
+<pre>[1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+↳ bin/rails:9
+[1m[35m (6.0ms)[0m  [1m[35mALTER TABLE &quot;gossips&quot; ADD &quot;user_id&quot; bigint[0m
+↳ db/migrate/20180807141907_add_assotiation_to_gossip.rb:3
+[1m[35m (117.6ms)[0m  [1m[35mCREATE  INDEX  &quot;index_gossips_on_user_id&quot; ON &quot;gossips&quot;  (&quot;user_id&quot;)[0m
+↳ db/migrate/20180807141907_add_assotiation_to_gossip.rb:3
+[1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO &quot;schema_migrations&quot; (&quot;version&quot;) VALUES ($1) RETURNING &quot;version&quot;[0m  [[&quot;version&quot;, &quot;20180807141907&quot;]]
+↳ bin/rails:9
+[1m[35m (14.6ms)[0m  [1m[35mCOMMIT[0m
+↳ bin/rails:9
+[1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  &quot;ar_internal_metadata&quot;.* FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = $1 LIMIT $2[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;LIMIT&quot;, 1]]
+↳ bin/rails:9
+[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+↳ bin/rails:9
+[1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+↳ bin/rails:9
+[1m[35m (1.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9
+[1m[36mGossip Load (18.3ms)[0m  [1m[34mSELECT  &quot;gossips&quot;.* FROM &quot;gossips&quot; LIMIT $1[0m  [[&quot;LIMIT&quot;, 11]]
+[1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; LIMIT $1[0m  [[&quot;LIMIT&quot;, 11]]
+[1m[35m (0.9ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9
+[1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+↳ db/seeds.rb:9
+[1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+↳ db/seeds.rb:9
+[1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+↳ db/seeds.rb:9
+[1m[35m (1.8ms)[0m  [1m[31mROLLBACK[0m
+↳ db/seeds.rb:9
+[1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+↳ db/seeds.rb:9
+[1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+↳ db/seeds.rb:9
+[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+↳ db/seeds.rb:9
+[1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+↳ db/seeds.rb:9
+[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+↳ db/seeds.rb:9
+[1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+↳ db/seeds.rb:9
+[1m[36mGossip Load (0.5ms)[0m  [1m[34mSELECT  &quot;gossips&quot;.* FROM &quot;gossips&quot; LIMIT $1[0m  [[&quot;LIMIT&quot;, 11]]
+[1m[35m (0.9ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9
+[1m[35m (3.8ms)[0m  [1m[35mBEGIN[0m
+↳ db/seeds.rb:9
+[1m[35m (5.1ms)[0m  [1m[31mROLLBACK[0m
+↳ db/seeds.rb:9
+[1m[35m (1.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9
+[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+↳ db/seeds.rb:9
+[1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+↳ db/seeds.rb:9
+[1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; LIMIT $1[0m  [[&quot;LIMIT&quot;, 11]]</pre>
+
+<p>Started GET “/users/edit” for 127.0.0.1 at 2018-08-07 16:29:11 +0200</p>
+
+<pre>[1m[35m (1.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98</pre>
+
+<p>Processing by Devise::RegistrationsController#edit as HTML</p>
+
+<pre>[1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;id&quot;, 1], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Rendering devise/registrations/edit.html.erb within layouts/application
+Rendered devise/registrations/edit.html.erb within layouts/application (5.1ms)</pre>
+
+<p>Completed 200 OK in 153ms (Views: 75.3ms | ActiveRecord: 9.9ms)</p>
+
+<p>Started DELETE “/users” for 127.0.0.1 at 2018-08-07 16:29:13 +0200
+Processing by Devise::RegistrationsController#destroy as HTML</p>
+
+<pre>Parameters: {&quot;authenticity_token&quot;=&gt;&quot;owX04ngqmCZEcKWWkMjCa4lFRmDgHLOdSM8/gDPHwOEZj/C0J8QZotnKDt/qPTRJUQtKOdI+4AXBW4lmnzlY/g==&quot;}
+[1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;id&quot;, 1], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[36mUser Destroy (13.3ms)[0m  [1m[31mDELETE FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1[0m  [[&quot;id&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (34.8ms)[0m  [1m[35mCOMMIT[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98</pre>
+
+<p>Redirected to <a href="http://localhost:3000">localhost:3000</a>/ Completed
+302 Found in 57ms (ActiveRecord: 48.9ms)</p>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-08-07 16:29:13 +0200 Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_in” for 127.0.0.1 at 2018-08-07 16:29:13 +0200
+Processing by Devise::SessionsController#new as HTML</p>
+
+<pre>Rendering devise/sessions/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (1.6ms)
+Rendered devise/sessions/new.html.erb within layouts/application (5.9ms)</pre>
+
+<p>Completed 200 OK in 34ms (Views: 31.6ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_up” for 127.0.0.1 at 2018-08-07 16:29:16 +0200
+Processing by Devise::RegistrationsController#new as HTML</p>
+
+<pre>Rendering devise/registrations/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (2.6ms)
+Rendered devise/registrations/new.html.erb within layouts/application (30.3ms)</pre>
+
+<p>Completed 200 OK in 83ms (Views: 81.5ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_up” for 127.0.0.1 at 2018-08-07 16:29:38 +0200
+Processing by Devise::RegistrationsController#new as HTML</p>
+
+<pre>Rendering devise/registrations/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (5.5ms)
+Rendered devise/registrations/new.html.erb within layouts/application (13.0ms)</pre>
+
+<p>Completed 200 OK in 58ms (Views: 56.7ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_up” for 127.0.0.1 at 2018-08-07 16:30:06 +0200
+Processing by Devise::RegistrationsController#new as HTML</p>
+
+<pre>Rendering devise/registrations/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (5.3ms)
+Rendered devise/registrations/new.html.erb within layouts/application (27.1ms)</pre>
+
+<p>Completed 200 OK in 76ms (Views: 74.6ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_up” for 127.0.0.1 at 2018-08-07 16:30:49 +0200
+Processing by Devise::RegistrationsController#new as HTML</p>
+
+<pre>Rendering devise/registrations/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (2.4ms)
+Rendered devise/registrations/new.html.erb within layouts/application (10.3ms)</pre>
+
+<p>Completed 200 OK in 57ms (Views: 54.0ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started POST “/users” for 127.0.0.1 at 2018-08-07 16:30:57 +0200 Processing
+by Devise::RegistrationsController#create as HTML</p>
+
+<pre>Parameters: {&quot;utf8&quot;=&gt;&quot;✓&quot;, &quot;authenticity_token&quot;=&gt;&quot;0GRex0JrHbLyGMhANCNag2jp1kYsaVjGqgpdQHBX2NBufkfPXkneKSIIQ9jjXkpQGKgODqlMt4iXEgo5MRs0dw==&quot;, &quot;user&quot;=&gt;{&quot;username&quot;=&gt;&quot;dyf_tfh&quot;, &quot;email&quot;=&gt;&quot;n.zhao@hotmail.fr&quot;, &quot;password&quot;=&gt;&quot;[FILTERED]&quot;, &quot;password_confirmation&quot;=&gt;&quot;[FILTERED]&quot;}, &quot;commit&quot;=&gt;&quot;Sign up&quot;}</pre>
+
+<p>Unpermitted parameter: :username</p>
+
+<pre>[1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[36mUser Exists (3.8ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = $1 LIMIT $2[0m  [[&quot;email&quot;, &quot;n.zhao@hotmail.fr&quot;], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;encrypted_password&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES ($1, $2, $3, $4) RETURNING &quot;id&quot;[0m  [[&quot;email&quot;, &quot;n.zhao@hotmail.fr&quot;], [&quot;encrypted_password&quot;, &quot;$2a$11$SPa9cd2cUnJfPlF20ir/Ueuo3naTMlSuRL.JBgVrxoPzhplwu.wo2&quot;], [&quot;created_at&quot;, &quot;2018-08-07 14:30:57.594191&quot;], [&quot;updated_at&quot;, &quot;2018-08-07 14:30:57.594191&quot;]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (31.3ms)[0m  [1m[35mCOMMIT[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE &quot;users&quot; SET &quot;sign_in_count&quot; = $1, &quot;current_sign_in_at&quot; = $2, &quot;last_sign_in_at&quot; = $3, &quot;current_sign_in_ip&quot; = $4, &quot;last_sign_in_ip&quot; = $5, &quot;updated_at&quot; = $6 WHERE &quot;users&quot;.&quot;id&quot; = $7[0m  [[&quot;sign_in_count&quot;, 1], [&quot;current_sign_in_at&quot;, &quot;2018-08-07 14:30:57.629499&quot;], [&quot;last_sign_in_at&quot;, &quot;2018-08-07 14:30:57.629499&quot;], [&quot;current_sign_in_ip&quot;, &quot;127.0.0.1/32&quot;], [&quot;last_sign_in_ip&quot;, &quot;127.0.0.1/32&quot;], [&quot;updated_at&quot;, &quot;2018-08-07 14:30:57.635650&quot;], [&quot;id&quot;, 2]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98</pre>
+
+<p>Redirected to <a href="http://localhost:3000">localhost:3000</a>/ Completed
+302 Found in 283ms (ActiveRecord: 42.9ms)</p>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-08-07 16:30:57 +0200 Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML</p>
+
+<pre>[1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;id&quot;, 2], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Rendering home/index.html.erb within layouts/application
+Rendered home/index.html.erb within layouts/application (7.6ms)</pre>
+
+<p>Completed 200 OK in 81ms (Views: 74.2ms | ActiveRecord: 0.9ms)</p>
+
+<p>Started GET “/users/edit” for 127.0.0.1 at 2018-08-07 16:31:00 +0200
+Processing by Devise::RegistrationsController#edit as HTML</p>
+
+<pre>[1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;id&quot;, 2], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Rendering devise/registrations/edit.html.erb within layouts/application
+Rendered devise/registrations/edit.html.erb within layouts/application (25.1ms)</pre>
+
+<p>Completed 200 OK in 100ms (Views: 79.5ms | ActiveRecord: 2.7ms)</p>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-08-07 16:31:53 +0200 Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML</p>
+
+<pre>[1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;id&quot;, 2], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Rendering home/index.html.erb within layouts/application
+Rendered home/index.html.erb within layouts/application (1.5ms)</pre>
+
+<p>Completed 200 OK in 62ms (Views: 57.9ms | ActiveRecord: 0.6ms)</p>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-08-07 16:32:08 +0200 Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML</p>
+
+<pre>[1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;id&quot;, 2], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Rendering home/index.html.erb within layouts/application
+Rendered home/index.html.erb within layouts/application (1.3ms)</pre>
+
+<p>Completed 200 OK in 123ms (Views: 114.2ms | ActiveRecord: 0.6ms)</p>
+
+<pre>[1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; LIMIT $1[0m  [[&quot;LIMIT&quot;, 11]]</pre>
+
+<p>Started GET “/users/edit” for 127.0.0.1 at 2018-08-07 16:33:05 +0200
+Processing by Devise::RegistrationsController#edit as HTML</p>
+
+<pre>[1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;id&quot;, 2], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Rendering devise/registrations/edit.html.erb within layouts/application
+Rendered devise/registrations/edit.html.erb within layouts/application (10.5ms)</pre>
+
+<p>Completed 200 OK in 104ms (Views: 96.2ms | ActiveRecord: 0.6ms)</p>
+
+<p>Started DELETE “/users” for 127.0.0.1 at 2018-08-07 16:33:08 +0200
+Processing by Devise::RegistrationsController#destroy as HTML</p>
+
+<pre>Parameters: {&quot;authenticity_token&quot;=&gt;&quot;OU+0L3is7gJPMdx91CZ2X5vRoasrt/tFg/qmbXM+2xqoJ1b7c55zJsyPKivxTSNgNwUiki1fRs4CiNL13z9vQw==&quot;}
+[1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;id&quot;, 2], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[36mUser Destroy (1.5ms)[0m  [1m[31mDELETE FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1[0m  [[&quot;id&quot;, 2]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (28.6ms)[0m  [1m[35mCOMMIT[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98</pre>
+
+<p>Redirected to <a href="http://localhost:3000">localhost:3000</a>/ Completed
+302 Found in 41ms (ActiveRecord: 31.1ms)</p>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-08-07 16:33:08 +0200 Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_in” for 127.0.0.1 at 2018-08-07 16:33:08 +0200
+Processing by Devise::SessionsController#new as HTML</p>
+
+<pre>Rendering devise/sessions/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (1.5ms)
+Rendered devise/sessions/new.html.erb within layouts/application (9.3ms)</pre>
+
+<p>Completed 200 OK in 72ms (Views: 70.3ms | ActiveRecord: 0.0ms)</p>
+
+<pre>[1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; LIMIT $1[0m  [[&quot;LIMIT&quot;, 11]]</pre>
+
+<p>Started GET “/users/sign_up” for 127.0.0.1 at 2018-08-07 16:34:25 +0200
+Processing by Devise::RegistrationsController#new as HTML</p>
+
+<pre>Rendering devise/registrations/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (1.5ms)
+Rendered devise/registrations/new.html.erb within layouts/application (26.8ms)</pre>
+
+<p>Completed 200 OK in 88ms (Views: 86.3ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started POST “/users” for 127.0.0.1 at 2018-08-07 16:34:44 +0200 Processing
+by Devise::RegistrationsController#create as HTML</p>
+
+<pre>Parameters: {&quot;utf8&quot;=&gt;&quot;✓&quot;, &quot;authenticity_token&quot;=&gt;&quot;mHbRKk0zDyDl9h1DTIKQcViQWforDLniSy7ERUoVhaXGV7UBVVx++xx7iPE6V5certbIMRf6A9RtUlkXDSURfw==&quot;, &quot;user&quot;=&gt;{&quot;username&quot;=&gt;&quot;dyf_tfh&quot;, &quot;email&quot;=&gt;&quot;n.zhao@hotmail.fr&quot;, &quot;password&quot;=&gt;&quot;[FILTERED]&quot;, &quot;password_confirmation&quot;=&gt;&quot;[FILTERED]&quot;}, &quot;commit&quot;=&gt;&quot;Sign up&quot;}</pre>
+
+<p>Unpermitted parameter: :username</p>
+
+<pre>[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = $1 LIMIT $2[0m  [[&quot;email&quot;, &quot;n.zhao@hotmail.fr&quot;], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;encrypted_password&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES ($1, $2, $3, $4) RETURNING &quot;id&quot;[0m  [[&quot;email&quot;, &quot;n.zhao@hotmail.fr&quot;], [&quot;encrypted_password&quot;, &quot;$2a$11$kJE38hDO7bwaAzH.omF6DuFt5Au86qo/FXFSMqAjfWbEL/qo8T3L.&quot;], [&quot;created_at&quot;, &quot;2018-08-07 14:34:44.327979&quot;], [&quot;updated_at&quot;, &quot;2018-08-07 14:34:44.327979&quot;]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (34.3ms)[0m  [1m[35mCOMMIT[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE &quot;users&quot; SET &quot;sign_in_count&quot; = $1, &quot;current_sign_in_at&quot; = $2, &quot;last_sign_in_at&quot; = $3, &quot;current_sign_in_ip&quot; = $4, &quot;last_sign_in_ip&quot; = $5, &quot;updated_at&quot; = $6 WHERE &quot;users&quot;.&quot;id&quot; = $7[0m  [[&quot;sign_in_count&quot;, 1], [&quot;current_sign_in_at&quot;, &quot;2018-08-07 14:34:44.365680&quot;], [&quot;last_sign_in_at&quot;, &quot;2018-08-07 14:34:44.365680&quot;], [&quot;current_sign_in_ip&quot;, &quot;127.0.0.1/32&quot;], [&quot;last_sign_in_ip&quot;, &quot;127.0.0.1/32&quot;], [&quot;updated_at&quot;, &quot;2018-08-07 14:34:44.367062&quot;], [&quot;id&quot;, 3]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98</pre>
+
+<p>Redirected to <a href="http://localhost:3000">localhost:3000</a>/ Completed
+302 Found in 263ms (ActiveRecord: 42.3ms)</p>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-08-07 16:34:44 +0200 Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML</p>
+
+<pre>[1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;id&quot;, 3], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Rendering home/index.html.erb within layouts/application
+Rendered home/index.html.erb within layouts/application (7.2ms)</pre>
+
+<p>Completed 200 OK in 40ms (Views: 35.5ms | ActiveRecord: 0.7ms)</p>
+
+<p>Started DELETE “/users/sign_out” for 127.0.0.1 at 2018-08-07 16:39:49 +0200
+Processing by Devise::SessionsController#destroy as HTML</p>
+
+<pre>Parameters: {&quot;authenticity_token&quot;=&gt;&quot;IfpIsA68AB14qtsX/fNFKcZCPrPycWJVkmmWzSxlHOAIqmaxx2Bc5cWH/CsWi+FfIqvH5PRMS2MsbdmQYR8/vg==&quot;}
+[1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;id&quot;, 3], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98</pre>
+
+<p>Redirected to <a href="http://localhost:3000">localhost:3000</a>/ Completed
+302 Found in 62ms (ActiveRecord: 14.1ms)</p>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-08-07 16:39:50 +0200 Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_in” for 127.0.0.1 at 2018-08-07 16:39:50 +0200
+Processing by Devise::SessionsController#new as HTML</p>
+
+<pre>Rendering devise/sessions/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (1.6ms)
+Rendered devise/sessions/new.html.erb within layouts/application (13.8ms)</pre>
+
+<p>Completed 200 OK in 84ms (Views: 82.6ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_up” for 127.0.0.1 at 2018-08-07 16:39:52 +0200
+Processing by Devise::RegistrationsController#new as HTML</p>
+
+<pre>Rendering devise/registrations/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (1.6ms)
+Rendered devise/registrations/new.html.erb within layouts/application (7.8ms)</pre>
+
+<p>Completed 200 OK in 76ms (Views: 63.2ms | ActiveRecord: 0.0ms)</p>
+
+<p>Started POST “/users” for 127.0.0.1 at 2018-08-07 16:40:04 +0200 Processing
+by Devise::RegistrationsController#create as HTML</p>
+
+<pre>Parameters: {&quot;utf8&quot;=&gt;&quot;✓&quot;, &quot;authenticity_token&quot;=&gt;&quot;xMGWS7+ZM0dV4R+RuhKUA5R2kkBbD8M1PvK9aLPy3CTsZ4mUzQHieS7eDFSc57I4UOtYO5r42u61jAQ0yMpHnw==&quot;, &quot;user&quot;=&gt;{&quot;username&quot;=&gt;&quot;dyf-lol&quot;, &quot;email&quot;=&gt;&quot;n.zhao@gmail.com&quot;, &quot;password&quot;=&gt;&quot;[FILTERED]&quot;, &quot;password_confirmation&quot;=&gt;&quot;[FILTERED]&quot;}, &quot;commit&quot;=&gt;&quot;Sign up&quot;}
+[1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;email&quot; = $1 LIMIT $2[0m  [[&quot;email&quot;, &quot;n.zhao@gmail.com&quot;], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO &quot;users&quot; (&quot;email&quot;, &quot;encrypted_password&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;username&quot;) VALUES ($1, $2, $3, $4, $5) RETURNING &quot;id&quot;[0m  [[&quot;email&quot;, &quot;n.zhao@gmail.com&quot;], [&quot;encrypted_password&quot;, &quot;$2a$11$9T759/ltm9xo3gXYymLFiO4LzH2cYjU99NjWE1GFNKnBY/I1DEr1i&quot;], [&quot;created_at&quot;, &quot;2018-08-07 14:40:04.391343&quot;], [&quot;updated_at&quot;, &quot;2018-08-07 14:40:04.391343&quot;], [&quot;username&quot;, &quot;dyf-lol&quot;]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (16.2ms)[0m  [1m[35mCOMMIT[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE &quot;users&quot; SET &quot;sign_in_count&quot; = $1, &quot;current_sign_in_at&quot; = $2, &quot;last_sign_in_at&quot; = $3, &quot;current_sign_in_ip&quot; = $4, &quot;last_sign_in_ip&quot; = $5, &quot;updated_at&quot; = $6 WHERE &quot;users&quot;.&quot;id&quot; = $7[0m  [[&quot;sign_in_count&quot;, 1], [&quot;current_sign_in_at&quot;, &quot;2018-08-07 14:40:04.413326&quot;], [&quot;last_sign_in_at&quot;, &quot;2018-08-07 14:40:04.413326&quot;], [&quot;current_sign_in_ip&quot;, &quot;127.0.0.1/32&quot;], [&quot;last_sign_in_ip&quot;, &quot;127.0.0.1/32&quot;], [&quot;updated_at&quot;, &quot;2018-08-07 14:40:04.416636&quot;], [&quot;id&quot;, 4]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (11.4ms)[0m  [1m[35mCOMMIT[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98</pre>
+
+<p>Redirected to <a href="http://localhost:3000">localhost:3000</a>/ Completed
+302 Found in 286ms (ActiveRecord: 30.4ms)</p>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-08-07 16:40:04 +0200 Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML</p>
+
+<pre>[1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;id&quot;, 4], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Rendering home/index.html.erb within layouts/application
+Rendered home/index.html.erb within layouts/application (8.8ms)</pre>
+
+<p>Completed 200 OK in 91ms (Views: 85.6ms | ActiveRecord: 0.8ms)</p>
+
+<pre>[1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; LIMIT $1[0m  [[&quot;LIMIT&quot;, 11]]
+[1m[36mGossip Load (0.5ms)[0m  [1m[34mSELECT  &quot;gossips&quot;.* FROM &quot;gossips&quot; LIMIT $1[0m  [[&quot;LIMIT&quot;, 11]]
+[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+[1m[36mGossip Load (0.4ms)[0m  [1m[34mSELECT  &quot;gossips&quot;.* FROM &quot;gossips&quot; LIMIT $1[0m  [[&quot;LIMIT&quot;, 11]]
+[1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+[1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+[1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; LIMIT $1[0m  [[&quot;LIMIT&quot;, 11]]
+[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+[1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+[1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+[1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+[1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+[1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; ORDER BY &quot;users&quot;.&quot;id&quot; DESC LIMIT $1[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+[1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; ORDER BY &quot;users&quot;.&quot;id&quot; DESC LIMIT $1[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (0.9ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9
+[1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; ORDER BY &quot;users&quot;.&quot;id&quot; DESC LIMIT $1[0m  [[&quot;LIMIT&quot;, 1]]
+↳ db/seeds.rb:9
+[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+↳ db/seeds.rb:9
+[1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+↳ db/seeds.rb:9
+[1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; ORDER BY &quot;users&quot;.&quot;id&quot; DESC LIMIT $1[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35m (1.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9
+[1m[35m (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9
+[1m[35m (0.5ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9
+[1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (0.6ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9</pre>
+
+<p>Migrating to <a
+href="../AddAssotiationToGossip.html">AddAssotiationToGossip</a>
+(20180807141907)</p>
+
+<pre>[1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+↳ bin/rails:9
+[1m[35m (85.6ms)[0m  [1m[35mALTER TABLE &quot;gossips&quot; DROP COLUMN &quot;user_id&quot;[0m
+↳ bin/rails:9
+[1m[36mActiveRecord::SchemaMigration Destroy (1.5ms)[0m  [1m[31mDELETE FROM &quot;schema_migrations&quot; WHERE &quot;schema_migrations&quot;.&quot;version&quot; = $1[0m  [[&quot;version&quot;, &quot;20180807141907&quot;]]
+↳ bin/rails:9
+[1m[35m (34.4ms)[0m  [1m[35mCOMMIT[0m
+↳ bin/rails:9
+[1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (0.7ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9
+[1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (1.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9</pre>
+
+<p>Migrating to <a
+href="../AddAssotiationToGossip.html">AddAssotiationToGossip</a>
+(20180807141907)</p>
+
+<pre>[1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+↳ bin/rails:9
+[1m[35m (0.8ms)[0m  [1m[35mALTER TABLE &quot;gossips&quot; ADD &quot;user_id&quot; bigint[0m
+↳ db/migrate/20180807141907_add_assotiation_to_gossip.rb:3
+[1m[35m (92.6ms)[0m  [1m[35mCREATE  INDEX  &quot;index_gossips_on_user_id&quot; ON &quot;gossips&quot;  (&quot;user_id&quot;)[0m
+↳ db/migrate/20180807141907_add_assotiation_to_gossip.rb:3
+[1m[35m (105.9ms)[0m  [1m[35mALTER TABLE &quot;gossips&quot; ADD CONSTRAINT &quot;fk_rails_9e6296a836&quot;</pre>
+
+<p>FOREIGN KEY (“user_id”)</p>
+
+<pre>REFERENCES &quot;users&quot; (&quot;id&quot;)</pre>
+
+<p>[0m</p>
+
+<pre>↳ db/migrate/20180807141907_add_assotiation_to_gossip.rb:3
+[1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO &quot;schema_migrations&quot; (&quot;version&quot;) VALUES ($1) RETURNING &quot;version&quot;[0m  [[&quot;version&quot;, &quot;20180807141907&quot;]]
+↳ bin/rails:9
+[1m[35m (9.7ms)[0m  [1m[35mCOMMIT[0m
+↳ bin/rails:9
+[1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  &quot;ar_internal_metadata&quot;.* FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = $1 LIMIT $2[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;LIMIT&quot;, 1]]
+↳ bin/rails:9
+[1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+↳ bin/rails:9
+[1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+↳ bin/rails:9
+[1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (0.5ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9
+[1m[35m (0.9ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9
+[1m[35m (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9
+[1m[35m (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9
+[1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9</pre>
+
+<p>Migrating to <a
+href="../AddAssotiationToGossip.html">AddAssotiationToGossip</a>
+(20180807141907)</p>
+
+<pre>[1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+↳ bin/rails:9
+[1m[35m (43.1ms)[0m  [1m[35mALTER TABLE &quot;gossips&quot; DROP CONSTRAINT &quot;fk_rails_9e6296a836&quot;[0m
+↳ bin/rails:9
+[1m[35m (0.7ms)[0m  [1m[35mALTER TABLE &quot;gossips&quot; DROP COLUMN &quot;user_id&quot;[0m
+↳ bin/rails:9
+[1m[36mActiveRecord::SchemaMigration Destroy (0.7ms)[0m  [1m[31mDELETE FROM &quot;schema_migrations&quot; WHERE &quot;schema_migrations&quot;.&quot;version&quot; = $1[0m  [[&quot;version&quot;, &quot;20180807141907&quot;]]
+↳ bin/rails:9
+[1m[35m (11.1ms)[0m  [1m[35mCOMMIT[0m
+↳ bin/rails:9
+[1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (0.6ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9
+[1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (1.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9</pre>
+
+<p>Migrating to <a
+href="../AddAssotiationToGossip.html">AddAssotiationToGossip</a>
+(20180807141907)</p>
+
+<pre>[1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+↳ bin/rails:9
+[1m[35m (1.2ms)[0m  [1m[35mALTER TABLE &quot;gossips&quot; ADD &quot;user_id&quot; bigint[0m
+↳ db/migrate/20180807141907_add_assotiation_to_gossip.rb:3
+[1m[35m (91.8ms)[0m  [1m[35mCREATE  INDEX  &quot;index_gossips_on_user_id&quot; ON &quot;gossips&quot;  (&quot;user_id&quot;)[0m
+↳ db/migrate/20180807141907_add_assotiation_to_gossip.rb:3
+[1m[35m (2.4ms)[0m  [1m[35mALTER TABLE &quot;gossips&quot; ADD CONSTRAINT &quot;fk_rails_9e6296a836&quot;</pre>
+
+<p>FOREIGN KEY (“user_id”)</p>
+
+<pre>REFERENCES &quot;users&quot; (&quot;id&quot;)</pre>
+
+<p>[0m</p>
+
+<pre>↳ db/migrate/20180807141907_add_assotiation_to_gossip.rb:3
+[1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO &quot;schema_migrations&quot; (&quot;version&quot;) VALUES ($1) RETURNING &quot;version&quot;[0m  [[&quot;version&quot;, &quot;20180807141907&quot;]]
+↳ bin/rails:9
+[1m[35m (17.7ms)[0m  [1m[35mCOMMIT[0m
+↳ bin/rails:9
+[1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  &quot;ar_internal_metadata&quot;.* FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = $1 LIMIT $2[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;LIMIT&quot;, 1]]
+↳ bin/rails:9
+[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+↳ bin/rails:9
+[1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+↳ bin/rails:9
+[1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9
+[1m[35m (1.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9
+[1m[35m (0.5ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9
+[1m[35m (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9
+[1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9</pre>
+
+<p>Migrating to <a
+href="../AddAssotiationToGossip.html">AddAssotiationToGossip</a>
+(20180807141907)</p>
+
+<pre>[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+↳ bin/rails:9
+[1m[35m (1.3ms)[0m  [1m[35mALTER TABLE &quot;gossips&quot; DROP CONSTRAINT &quot;fk_rails_9e6296a836&quot;[0m
+↳ bin/rails:9
+[1m[35m (1.1ms)[0m  [1m[35mALTER TABLE &quot;gossips&quot; DROP COLUMN &quot;user_id&quot;[0m
+↳ bin/rails:9
+[1m[36mActiveRecord::SchemaMigration Destroy (0.7ms)[0m  [1m[31mDELETE FROM &quot;schema_migrations&quot; WHERE &quot;schema_migrations&quot;.&quot;version&quot; = $1[0m  [[&quot;version&quot;, &quot;20180807141907&quot;]]
+↳ bin/rails:9
+[1m[35m (44.1ms)[0m  [1m[35mCOMMIT[0m
+↳ bin/rails:9
+[1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9
+[1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (1.2ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9</pre>
+
+<p>Migrating to <a
+href="../AddAssotiationToGossip.html">AddAssotiationToGossip</a>
+(20180807141907)</p>
+
+<pre>[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+↳ bin/rails:9
+[1m[35m (1.2ms)[0m  [1m[35mALTER TABLE &quot;gossips&quot; ADD &quot;user_id&quot; bigint[0m
+↳ db/migrate/20180807141907_add_assotiation_to_gossip.rb:3
+[1m[35m (72.5ms)[0m  [1m[35mCREATE  INDEX  &quot;index_gossips_on_user_id&quot; ON &quot;gossips&quot;  (&quot;user_id&quot;)[0m
+↳ db/migrate/20180807141907_add_assotiation_to_gossip.rb:3
+[1m[35m (2.2ms)[0m  [1m[35mALTER TABLE &quot;gossips&quot; ADD CONSTRAINT &quot;fk_rails_9e6296a836&quot;</pre>
+
+<p>FOREIGN KEY (“user_id”)</p>
+
+<pre>REFERENCES &quot;users&quot; (&quot;id&quot;)</pre>
+
+<p>[0m</p>
+
+<pre>↳ db/migrate/20180807141907_add_assotiation_to_gossip.rb:3
+[1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO &quot;schema_migrations&quot; (&quot;version&quot;) VALUES ($1) RETURNING &quot;version&quot;[0m  [[&quot;version&quot;, &quot;20180807141907&quot;]]
+↳ bin/rails:9
+[1m[35m (17.4ms)[0m  [1m[35mCOMMIT[0m
+↳ bin/rails:9
+[1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  &quot;ar_internal_metadata&quot;.* FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = $1 LIMIT $2[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;LIMIT&quot;, 1]]
+↳ bin/rails:9
+[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+↳ bin/rails:9
+[1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+↳ bin/rails:9
+[1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4833031731104927805)[0m
+↳ bin/rails:9
+[1m[35m (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9
+[1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+[1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[1m[35m (2.0ms)[0m  [1m[31mROLLBACK[0m
+[1m[35m (0.8ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ bin/rails:9
+[1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; ORDER BY &quot;users&quot;.&quot;id&quot; DESC LIMIT $1[0m  [[&quot;LIMIT&quot;, 1]]
+↳ db/seeds.rb:11
+[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+↳ db/seeds.rb:12
+[1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 LIMIT $2[0m  [[&quot;id&quot;, 4], [&quot;LIMIT&quot;, 1]]
+↳ db/seeds.rb:12
+[1m[36mGossip Create (1.3ms)[0m  [1m[32mINSERT INTO &quot;gossips&quot; (&quot;content&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;user_id&quot;) VALUES ($1, $2, $3, $4) RETURNING &quot;id&quot;[0m  [[&quot;content&quot;, &quot;texte0&quot;], [&quot;created_at&quot;, &quot;2018-08-07 15:01:19.298138&quot;], [&quot;updated_at&quot;, &quot;2018-08-07 15:01:19.298138&quot;], [&quot;user_id&quot;, 4]]
+↳ db/seeds.rb:12
+[1m[35m (37.7ms)[0m  [1m[35mCOMMIT[0m
+↳ db/seeds.rb:12
+[1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; ORDER BY &quot;users&quot;.&quot;id&quot; DESC LIMIT $1[0m  [[&quot;LIMIT&quot;, 1]]
+↳ db/seeds.rb:11
+[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+↳ db/seeds.rb:12
+[1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 LIMIT $2[0m  [[&quot;id&quot;, 4], [&quot;LIMIT&quot;, 1]]
+↳ db/seeds.rb:12
+[1m[36mGossip Create (0.6ms)[0m  [1m[32mINSERT INTO &quot;gossips&quot; (&quot;content&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;user_id&quot;) VALUES ($1, $2, $3, $4) RETURNING &quot;id&quot;[0m  [[&quot;content&quot;, &quot;texte1&quot;], [&quot;created_at&quot;, &quot;2018-08-07 15:01:19.345268&quot;], [&quot;updated_at&quot;, &quot;2018-08-07 15:01:19.345268&quot;], [&quot;user_id&quot;, 4]]
+↳ db/seeds.rb:12
+[1m[35m (8.2ms)[0m  [1m[35mCOMMIT[0m
+↳ db/seeds.rb:12
+[1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; ORDER BY &quot;users&quot;.&quot;id&quot; DESC LIMIT $1[0m  [[&quot;LIMIT&quot;, 1]]
+↳ db/seeds.rb:11
+[1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+↳ db/seeds.rb:12
+[1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 LIMIT $2[0m  [[&quot;id&quot;, 4], [&quot;LIMIT&quot;, 1]]
+↳ db/seeds.rb:12
+[1m[36mGossip Create (0.6ms)[0m  [1m[32mINSERT INTO &quot;gossips&quot; (&quot;content&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;user_id&quot;) VALUES ($1, $2, $3, $4) RETURNING &quot;id&quot;[0m  [[&quot;content&quot;, &quot;texte2&quot;], [&quot;created_at&quot;, &quot;2018-08-07 15:01:19.360105&quot;], [&quot;updated_at&quot;, &quot;2018-08-07 15:01:19.360105&quot;], [&quot;user_id&quot;, 4]]
+↳ db/seeds.rb:12
+[1m[35m (12.2ms)[0m  [1m[35mCOMMIT[0m
+↳ db/seeds.rb:12
+[1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; ORDER BY &quot;users&quot;.&quot;id&quot; DESC LIMIT $1[0m  [[&quot;LIMIT&quot;, 1]]
+↳ db/seeds.rb:11
+[1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+↳ db/seeds.rb:12
+[1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 LIMIT $2[0m  [[&quot;id&quot;, 4], [&quot;LIMIT&quot;, 1]]
+↳ db/seeds.rb:12
+[1m[36mGossip Create (0.6ms)[0m  [1m[32mINSERT INTO &quot;gossips&quot; (&quot;content&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;user_id&quot;) VALUES ($1, $2, $3, $4) RETURNING &quot;id&quot;[0m  [[&quot;content&quot;, &quot;texte3&quot;], [&quot;created_at&quot;, &quot;2018-08-07 15:01:19.378321&quot;], [&quot;updated_at&quot;, &quot;2018-08-07 15:01:19.378321&quot;], [&quot;user_id&quot;, 4]]
+↳ db/seeds.rb:12
+[1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+↳ db/seeds.rb:12
+[1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; ORDER BY &quot;users&quot;.&quot;id&quot; DESC LIMIT $1[0m  [[&quot;LIMIT&quot;, 1]]
+↳ db/seeds.rb:11
+[1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+↳ db/seeds.rb:12
+[1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 LIMIT $2[0m  [[&quot;id&quot;, 4], [&quot;LIMIT&quot;, 1]]
+↳ db/seeds.rb:12
+[1m[36mGossip Create (0.6ms)[0m  [1m[32mINSERT INTO &quot;gossips&quot; (&quot;content&quot;, &quot;created_at&quot;, &quot;updated_at&quot;, &quot;user_id&quot;) VALUES ($1, $2, $3, $4) RETURNING &quot;id&quot;[0m  [[&quot;content&quot;, &quot;texte4&quot;], [&quot;created_at&quot;, &quot;2018-08-07 15:01:19.392439&quot;], [&quot;updated_at&quot;, &quot;2018-08-07 15:01:19.392439&quot;], [&quot;user_id&quot;, 4]]
+↳ db/seeds.rb:12
+[1m[35m (13.1ms)[0m  [1m[35mCOMMIT[0m
+↳ db/seeds.rb:12
+[1m[36mGossip Load (0.8ms)[0m  [1m[34mSELECT  &quot;gossips&quot;.* FROM &quot;gossips&quot; LIMIT $1[0m  [[&quot;LIMIT&quot;, 11]]</pre>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-08-07 17:05:14 +0200</p>
+
+<pre>[1m[35m (1.2ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.&quot;version&quot; FROM &quot;schema_migrations&quot; ORDER BY &quot;schema_migrations&quot;.&quot;version&quot; ASC[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98</pre>
+
+<p>Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML</p>
+
+<pre>[1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;id&quot;, 4], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Rendering home/index.html.erb within layouts/application
+Rendered home/index.html.erb within layouts/application (16.4ms)</pre>
+
+<p>Completed 500 Internal Server Error in 82ms (ActiveRecord: 14.7ms)</p>
+
+<p>ActionView::Template::Error (undefined method `each&#39; for
+#&lt;Class:0x00007f6cc84a7798&gt;):</p>
+
+<pre>10:     &lt;li&gt;
+11:       &lt;%= link_to  &quot;Edit Profile&quot;, edit_user_registration_path %&gt;
+12:     &lt;/li&gt;
+13:     &lt;% Gossip.each do |a| %&gt;
+14:       &lt;%= a.content %&gt;
+15:     &lt;% end %&gt;
+16:   &lt;% else %&gt;</pre>
+
+<p>app/views/home/index.html.erb:13:in
+`_app_views_home_index_html_erb__3049124581939017014_70052629905060&#39;
+Started GET “/” for 127.0.0.1 at 2018-08-07 17:05:27 +0200 Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML</p>
+
+<pre>[1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;id&quot;, 4], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Rendering home/index.html.erb within layouts/application
+Rendered home/index.html.erb within layouts/application (39.0ms)</pre>
+
+<p>Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.6ms)</p>
+
+<p>ActionView::Template::Error (undefined method `foreach&#39; for
+#&lt;Class:0x00007f6cc84a7798&gt;):</p>
+
+<pre>10:     &lt;li&gt;
+11:       &lt;%= link_to  &quot;Edit Profile&quot;, edit_user_registration_path %&gt;
+12:     &lt;/li&gt;
+13:     &lt;% Gossip.foreach do |a| %&gt;
+14:       &lt;%= a.content %&gt;
+15:     &lt;% end %&gt;
+16:   &lt;% else %&gt;</pre>
+
+<p>app/views/home/index.html.erb:13:in
+`_app_views_home_index_html_erb__3049124581939017014_70052628234280&#39;
+Started GET “/” for 127.0.0.1 at 2018-08-07 17:07:30 +0200 Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML</p>
+
+<pre>[1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;id&quot;, 4], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Rendering home/index.html.erb within layouts/application
+[1m[36mGossip Load (0.8ms)[0m  [1m[34mSELECT &quot;gossips&quot;.* FROM &quot;gossips&quot;[0m
+↳ app/views/home/index.html.erb:13
+Rendered home/index.html.erb within layouts/application (30.6ms)</pre>
+
+<p>Completed 200 OK in 132ms (Views: 110.3ms | ActiveRecord: 3.8ms)</p>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-08-07 17:07:49 +0200 Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML</p>
+
+<pre>[1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;id&quot;, 4], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Rendering home/index.html.erb within layouts/application
+[1m[36mGossip Load (0.7ms)[0m  [1m[34mSELECT &quot;gossips&quot;.* FROM &quot;gossips&quot;[0m
+↳ app/views/home/index.html.erb:13
+Rendered home/index.html.erb within layouts/application (6.4ms)</pre>
+
+<p>Completed 200 OK in 48ms (Views: 41.5ms | ActiveRecord: 2.1ms)</p>
+
+<p>Started DELETE “/users/sign_out” for 127.0.0.1 at 2018-08-07 17:07:57 +0200
+Processing by Devise::SessionsController#destroy as HTML</p>
+
+<pre>Parameters: {&quot;authenticity_token&quot;=&gt;&quot;IpRkEuz/tpINNp7he4EDobupuDQ7iWL0WGnaZF1J49/k6T0UlsM+Y0nFHSHg/KETe/oWmUpmN2fIeM+gzllSnQ==&quot;}
+[1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  &quot;users&quot;.* FROM &quot;users&quot; WHERE &quot;users&quot;.&quot;id&quot; = $1 ORDER BY &quot;users&quot;.&quot;id&quot; ASC LIMIT $2[0m  [[&quot;id&quot;, 4], [&quot;LIMIT&quot;, 1]]
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+↳ /home/nicolas/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98</pre>
+
+<p>Redirected to <a href="http://localhost:3000">localhost:3000</a>/ Completed
+302 Found in 20ms (ActiveRecord: 6.8ms)</p>
+
+<p>Started GET “/” for 127.0.0.1 at 2018-08-07 17:07:57 +0200 Processing by <a
+href="../HomeController.html#method-i-index">HomeController#index</a> as
+HTML Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)</p>
+
+<p>Started GET “/users/sign_in” for 127.0.0.1 at 2018-08-07 17:07:57 +0200
+Processing by Devise::SessionsController#new as HTML</p>
+
+<pre>Rendering devise/sessions/new.html.erb within layouts/application
+Rendered devise/shared/_links.html.erb (1.9ms)
+Rendered devise/sessions/new.html.erb within layouts/application (7.9ms)</pre>
+
+<p>Completed 200 OK in 43ms (Views: 40.3ms | ActiveRecord: 0.0ms)</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.4.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

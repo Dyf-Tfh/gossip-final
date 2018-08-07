@@ -1,0 +1,11 @@
+<p>Hello world</p>
+<ul>
+  <% Gossip.all.each do |a| %>
+    <li>
+      <%= "Gossiper: " + a.anonymous_user.to_s + " Gossip: " + a.content + " Created at: " + a.created_at.to_s %>
+      <% if current_user.anonymous_user == a.anonymous_user  %>
+        <%= link_to  "Delete Gossip", gossip_path(a.id), method: :delete %>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
